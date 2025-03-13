@@ -6,17 +6,12 @@ use std::{
 
 use ::pkarr::{Keypair, PublicKey};
 use anyhow::Result;
-use homeserver_key_republisher::HomeserverKeyRepublisher;
-use http::HttpServers;
+use super::homeserver_key_republisher::HomeserverKeyRepublisher;
+use super::http::HttpServers;
 use tracing::info;
 
-use crate::{
-    config::{Config, DEFAULT_HTTPS_PORT, DEFAULT_HTTP_PORT},
-    core::HomeserverCore,
-};
+use crate::{core::HomeserverCore, persistence::config::{Config, DEFAULT_HTTPS_PORT, DEFAULT_HTTP_PORT}};
 
-mod homeserver_key_republisher;
-mod http;
 
 #[derive(Debug, Default)]
 /// Builder for [Homeserver].

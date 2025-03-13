@@ -14,7 +14,7 @@ use axum_server::{
 use futures_util::TryFutureExt;
 use pkarr::Keypair;
 
-use super::IoConfig;
+use super::homeserver::IoConfig;
 
 #[derive(Debug)]
 pub struct HttpServers {

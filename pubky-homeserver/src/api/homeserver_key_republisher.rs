@@ -8,7 +8,7 @@ use tokio::sync::Mutex;
 use tokio::task::JoinHandle;
 use tokio::time::{interval, Duration};
 
-use super::IoConfig;
+use super::homeserver::IoConfig;
 
 /// Republishes the homeserver's pkarr packet to the DHT every hour.
 #[derive(Debug)]

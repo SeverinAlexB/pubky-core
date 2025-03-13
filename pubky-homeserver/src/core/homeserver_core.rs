@@ -6,11 +6,15 @@ use axum::Router;
 use pubky_common::auth::AuthVerifier;
 use tokio::time::sleep;
 
-use crate::config::{
-    DEFAULT_LIST_LIMIT, DEFAULT_MAP_SIZE, DEFAULT_MAX_LIST_LIMIT, DEFAULT_STORAGE_DIR,
-};
 
 use crate::core::database::DB;
+
+// === Core ==
+pub const DEFAULT_STORAGE_DIR: &str = "pubky";
+pub const DEFAULT_MAP_SIZE: usize = 10995116277760; // 10TB (not = disk-space used)
+
+pub const DEFAULT_LIST_LIMIT: u16 = 100;
+pub const DEFAULT_MAX_LIST_LIMIT: u16 = 1000;
 
 #[derive(Clone, Debug)]
 pub(crate) struct AppState {
