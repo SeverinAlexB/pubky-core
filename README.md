@@ -17,7 +17,6 @@
       Rust Client's Docs
     </a>
     <span> | </span>
-    <span> | </span>
     <a href="https://www.npmjs.com/package/@synonymdev/pubky">
       JS bindings 
     </a>
